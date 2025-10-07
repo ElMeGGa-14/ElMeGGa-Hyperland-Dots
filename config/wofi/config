@@ -1,0 +1,11 @@
+# Wofi config
+mode=drun
+show=drun
+width=30%
+height=40%
+location=center
+hide-scroll=true
+line-height=20
+dynamic=true
+columns=1
+prompt=Run:

@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "active": "",
+            "default": ""
+        },
+        "on-click": "activate"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 50
+    },
+
+    "clock": {
+        "format": " %H:%M   %d/%m",
+        "tooltip-format": "<big>%Y %B</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "🔊", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-disconnected": "⚠ Desconectado",
+        "tooltip-format-wifi": "Velocidad: {bandwidthTotalBytes}",
+        "tooltip-format-ethernet": "Velocidad: {bandwidthTotalBytes}"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "充電 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{time}",
+        "states": {
+            "good": 90,
+            "warning": 30,
+            "critical": 15
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}

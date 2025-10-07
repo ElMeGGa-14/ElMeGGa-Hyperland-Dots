@@ -1,0 +1,41 @@
+/* Basic Waybar styling */
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "FiraCodeNerdFontMono-Regular", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #cdd6f4;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: #a6e3a1;
+}
+
+#workspaces button:hover {
+    background-color: #1e1e2e;
+}
+
+#window {
+    padding: 0 10px;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    padding: 0 10px;
+    background-color: #1e1e2e;
+    margin: 0 5px;
+}
